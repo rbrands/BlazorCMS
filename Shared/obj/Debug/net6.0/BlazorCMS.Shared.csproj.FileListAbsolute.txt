@@ -1,0 +1,12 @@
+C:\repos\BlazorCMS\Shared\bin\Debug\net6.0\BlazorCMS.Shared.deps.json
+C:\repos\BlazorCMS\Shared\bin\Debug\net6.0\BlazorCMS.Shared.dll
+C:\repos\BlazorCMS\Shared\bin\Debug\net6.0\ref\BlazorCMS.Shared.dll
+C:\repos\BlazorCMS\Shared\bin\Debug\net6.0\BlazorCMS.Shared.pdb
+C:\repos\BlazorCMS\Shared\obj\Debug\net6.0\BlazorCMS.Shared.csproj.AssemblyReference.cache
+C:\repos\BlazorCMS\Shared\obj\Debug\net6.0\BlazorCMS.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\BlazorCMS\Shared\obj\Debug\net6.0\BlazorCMS.Shared.AssemblyInfoInputs.cache
+C:\repos\BlazorCMS\Shared\obj\Debug\net6.0\BlazorCMS.Shared.AssemblyInfo.cs
+C:\repos\BlazorCMS\Shared\obj\Debug\net6.0\BlazorCMS.Shared.csproj.CoreCompileInputs.cache
+C:\repos\BlazorCMS\Shared\obj\Debug\net6.0\BlazorCMS.Shared.dll
+C:\repos\BlazorCMS\Shared\obj\Debug\net6.0\ref\BlazorCMS.Shared.dll
+C:\repos\BlazorCMS\Shared\obj\Debug\net6.0\BlazorCMS.Shared.pdb
