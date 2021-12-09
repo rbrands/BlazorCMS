@@ -6053,257 +6053,6 @@
         }
       },
       {
-        "HashCode": -161492437,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.App",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.App"
-        }
-      },
-      {
-        "HashCode": 349193247,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.App",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCMS.Client.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.App",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 706521997,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Pages.Authentication",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Authentication"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Action",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Action"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Pages.Authentication"
-        }
-      },
-      {
-        "HashCode": -405602816,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Pages.Authentication",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCMS.Client.Pages.Authentication"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Action",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Action"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Pages.Authentication",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 497263487,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Pages.Counter",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": -1101052395,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Pages.Counter",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCMS.Client.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1964044065,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Pages.FetchData",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": -956668309,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Pages.FetchData",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCMS.Client.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1870268445,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Pages.Index",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 1563756898,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Pages.Index",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCMS.Client.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1935399579,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Shared.LoginDisplay",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LoginDisplay"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Shared.LoginDisplay"
-        }
-      },
-      {
-        "HashCode": 1012571183,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Shared.LoginDisplay",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCMS.Client.Shared.LoginDisplay"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Shared.LoginDisplay",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -834477341,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Shared.RedirectToLogin",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RedirectToLogin"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Shared.RedirectToLogin"
-        }
-      },
-      {
-        "HashCode": 1780983518,
-        "Kind": "Components.Component",
-        "Name": "BlazorCMS.Client.Shared.RedirectToLogin",
-        "AssemblyName": "BlazorCMS.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCMS.Client.Shared.RedirectToLogin"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCMS.Client.Shared.RedirectToLogin",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -475784820,
         "Kind": "Components.Component",
         "Name": "BlazorCMS.Client.Shared.SurveyPrompt",
@@ -6353,6 +6102,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorCMS.Client.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -834477341,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Shared.RedirectToLogin",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RedirectToLogin"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Shared.RedirectToLogin"
+        }
+      },
+      {
+        "HashCode": 1780983518,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Shared.RedirectToLogin",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCMS.Client.Shared.RedirectToLogin"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Shared.RedirectToLogin",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -6453,6 +6235,39 @@
         }
       },
       {
+        "HashCode": 1935399579,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Shared.LoginDisplay",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LoginDisplay"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Shared.LoginDisplay"
+        }
+      },
+      {
+        "HashCode": 1012571183,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Shared.LoginDisplay",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCMS.Client.Shared.LoginDisplay"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Shared.LoginDisplay",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 119898069,
         "Kind": "Components.Component",
         "Name": "BlazorCMS.Client.Shared.NavMenu",
@@ -6482,6 +6297,191 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorCMS.Client.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1964044065,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Pages.FetchData",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Pages.FetchData"
+        }
+      },
+      {
+        "HashCode": -956668309,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Pages.FetchData",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCMS.Client.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 497263487,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Pages.Counter",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": -1101052395,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Pages.Counter",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCMS.Client.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 706521997,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Pages.Authentication",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Authentication"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Action",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Action"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Pages.Authentication"
+        }
+      },
+      {
+        "HashCode": -405602816,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Pages.Authentication",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCMS.Client.Pages.Authentication"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Action",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Action"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Pages.Authentication",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1870268445,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Pages.Index",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 1563756898,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.Pages.Index",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCMS.Client.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -161492437,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.App",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.App"
+        }
+      },
+      {
+        "HashCode": 349193247,
+        "Kind": "Components.Component",
+        "Name": "BlazorCMS.Client.App",
+        "AssemblyName": "BlazorCMS.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCMS.Client.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCMS.Client.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
