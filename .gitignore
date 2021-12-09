@@ -452,3 +452,10 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+Shared/obj/Debug/net6.0/BlazorCMS.Shared.csproj.AssemblyReference.cache
+Shared/obj/Debug/net6.0/BlazorCMS.Shared.assets.cache
+Shared/obj/Debug/net6.0/BlazorCMS.Shared.csproj.AssemblyReference.cache
+.gitignore
+.gitignore
+Shared/obj/Debug/net6.0/BlazorCMS.Shared.GeneratedMSBuildEditorConfig.editorconfig
+.gitignore
