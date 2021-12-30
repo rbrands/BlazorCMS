@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj": {}
+    "C:\\Users\\rbran\\Source\\Repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj": {}
   },
   "projects": {
-    "C:\\repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj": {
+    "C:\\Users\\rbran\\Source\\Repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\rbran\\Source\\Repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj",
         "projectName": "BlazorCMS.Shared",
-        "projectPath": "C:\\repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj",
-        "packagesPath": "C:\\Users\\rbrands\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\BlazorCMS\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\rbran\\Source\\Repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj",
+        "packagesPath": "C:\\Users\\rbran\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rbran\\Source\\Repos\\BlazorCMS\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rbrands\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\rbran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.pkg.github.com/MSiccDev/index.json": {},
           "https://nuget.pkg.github.com/rbrands/index.json": {}
         },
         "frameworks": {

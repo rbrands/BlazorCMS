@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hRQvfSc1+fzJOrc747DEhyNJ5kPnvjNo6dVdPA5iyidklhxIfy86i0Z06v8giU3jIE42PYoBD37US85F7eJu+w==",
+  "dgSpecHash": "Dn6SKLU9d9htwlz6s75FDLqyeOOwKBQwvxZ/pVgpRMoelBvlXWFDAR2wVN6JQnvd9XTiTuXs/faxiRRDRUVbLA==",
   "success": true,
-  "projectFilePath": "C:\\repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj",
+  "projectFilePath": "C:\\Users\\rbran\\Source\\Repos\\BlazorCMS\\Shared\\BlazorCMS.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

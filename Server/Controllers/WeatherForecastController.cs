@@ -5,7 +5,7 @@ using BlazorCMS.Shared;
 
 namespace BlazorCMS.Server.Controllers;
 
-[Authorize]
+[Authorize(Roles = "administrator")]
 [ApiController]
 [Route("[controller]")]
 [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
