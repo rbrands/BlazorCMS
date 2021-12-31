@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using BlazorCMS.Client;
+using BlazorCMS.Client.Data;
+using BlazorCMS.Shared;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -26,5 +28,6 @@ builder.Services.AddMsalAuthentication<RemoteAuthenticationState,
 CustomAccountFactory>();
 
 builder.Services.AddGraphClient();
+builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 
 await builder.Build().RunAsync();

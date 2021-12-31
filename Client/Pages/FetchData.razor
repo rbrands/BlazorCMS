@@ -3,7 +3,8 @@
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @using BlazorCMS.Shared
 @attribute [Authorize(Roles = "administrator")]
-@inject HttpClient Http
+@inject IWeatherForecastService WeatherForecastService
+
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -47,7 +48,7 @@ else
     {
         try
         {
-            forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+            forecasts = await WeatherForecastService.GetForecastAsync();
         }
         catch (AccessTokenNotAvailableException exception)
         {
