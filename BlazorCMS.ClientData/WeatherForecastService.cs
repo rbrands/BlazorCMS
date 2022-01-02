@@ -3,7 +3,7 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using BlazorCMS.Shared;
 
-namespace BlazorCMS.Client.Data
+namespace BlazorCMS.ClientData
 {
     public class WeatherForecastService : IWeatherForecastService
     {

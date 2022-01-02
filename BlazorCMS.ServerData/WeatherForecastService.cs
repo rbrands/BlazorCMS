@@ -1,6 +1,6 @@
 ﻿using BlazorCMS.Shared;
 
-namespace BlazorCMS.Server.Data
+namespace BlazorCMS.ServerData
 {
     public class WeatherForecastService : IWeatherForecastService
     {

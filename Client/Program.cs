@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using BlazorCMS.Client;
-using BlazorCMS.Client.Data;
+using BlazorCMS.ClientData;
 using BlazorCMS.Shared;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);

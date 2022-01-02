@@ -16,7 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlazorCMS.ClientData\BlazorCMS.ClientData.csproj" />
     <ProjectReference Include="..\Shared\BlazorCMS.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>

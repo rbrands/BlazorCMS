@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlazorCMS.ServerData\BlazorCMS.ServerData.csproj" />
     <ProjectReference Include="..\Client\BlazorCMS.Client.csproj" />
     <ProjectReference Include="..\Shared\BlazorCMS.Shared.csproj" />
   </ItemGroup>
@@ -22,6 +23,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.0" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0" />
     <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
