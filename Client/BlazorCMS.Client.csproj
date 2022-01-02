@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorCMS.ClientData\BlazorCMS.ClientData.csproj" />
+    <ProjectReference Include="..\BlazorCMS.UIComponents\BlazorCMS.UIComponents.csproj" />
     <ProjectReference Include="..\Shared\BlazorCMS.Shared.csproj" />
   </ItemGroup>
 

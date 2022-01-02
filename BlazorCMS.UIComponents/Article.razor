@@ -1,0 +1,11 @@
+﻿@using BlazorCMS.Shared
+
+
+@ChildContent
+
+@code {
+    [Parameter]
+    public string ArticleKey { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

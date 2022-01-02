@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCMS.ClientData", "Bla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCMS.ServerData", "BlazorCMS.ServerData\BlazorCMS.ServerData.csproj", "{AD48F82A-5AEF-489D-957E-691483818FB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCMS.UIComponents", "BlazorCMS.UIComponents\BlazorCMS.UIComponents.csproj", "{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,18 @@ Global
 		{AD48F82A-5AEF-489D-957E-691483818FB3}.Release|x64.Build.0 = Release|Any CPU
 		{AD48F82A-5AEF-489D-957E-691483818FB3}.Release|x86.ActiveCfg = Release|Any CPU
 		{AD48F82A-5AEF-489D-957E-691483818FB3}.Release|x86.Build.0 = Release|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Debug|x64.Build.0 = Debug|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Debug|x86.Build.0 = Debug|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Release|x64.ActiveCfg = Release|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Release|x64.Build.0 = Release|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Release|x86.ActiveCfg = Release|Any CPU
+		{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
