@@ -1,4 +1,7 @@
-﻿@using BlazorCMS.Shared
+﻿@using Shared=BlazorCMS.Shared
+@implements IDisposable
+@inject AppState AppStateStore
+@inject Shared.ISiteConfiguration SiteConfiguration
 
 
 @ChildContent
@@ -8,4 +11,29 @@
     public string ArticleKey { get; set; }
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+    private Shared.Article _article = new Shared.Article();
+    private bool _editMode = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        AppStateStore.OnChange += ReadArticle;
+        ReadArticle();
+    }
+    private async void ReadArticle()
+    {
+        if (AppStateStore.ArticleCache.ContainsKey(ArticleKey))
+        {
+            _article = AppStateStore.ArticleCache[ArticleKey];
+        }
+        else
+        {
+            _article = await SiteConfiguration.GetArticleByKeyAsync(ArticleKey);
+            AppStateStore.ArticleCache[ArticleKey] = _article;
+        }
+        StateHasChanged();
+    }
+    public void Dispose()
+    {
+        AppStateStore.OnChange -= ReadArticle;
+    }
 }

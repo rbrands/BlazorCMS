@@ -28,6 +28,9 @@ builder.Services.AddMsalAuthentication<RemoteAuthenticationState,
 CustomAccountFactory>();
 
 builder.Services.AddGraphClient();
+// Create services to be used via dependency injection
+builder.Services.AddSingleton<BlazorCMS.UIComponents.AppState>();
+builder.Services.AddScoped<ISiteConfiguration, SiteConfiguration>();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 
 await builder.Build().RunAsync();
