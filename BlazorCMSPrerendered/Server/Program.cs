@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.Azure.Cosmos;
 using BlazorCMS.Shared;
 using BlazorCMS.ServerData;
 
@@ -9,6 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+// Add services to be available for Dependency injection
+builder.Services.AddSingleton(builder.Configuration);
+CosmosClient cosmosClient = new CosmosClient(builder.Configuration["COSMOS_DB_CONNECTION_STRING"]);
+builder.Services.AddSingleton(cosmosClient);
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 
 var app = builder.Build();

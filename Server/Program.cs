@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Identity.Web;
+using Microsoft.Azure.Cosmos;
 using BlazorCMS.Shared;
 using BlazorCMS.ServerData;
 
@@ -19,6 +20,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+// Add services to be available for Dependency injection
+builder.Services.AddSingleton(builder.Configuration);
+CosmosClient cosmosClient = new CosmosClient(builder.Configuration["COSMOS_DB_CONNECTION_STRING"]);
+builder.Services.AddSingleton(cosmosClient);
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 
 var app = builder.Build();
