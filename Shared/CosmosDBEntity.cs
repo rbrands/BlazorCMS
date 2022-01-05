@@ -8,7 +8,7 @@ namespace BlazorCMS.Shared
     public class CosmosDBEntity
     {
         [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        public string? Id { get; set; }
         [JsonProperty(PropertyName = "type")]
         public string Type
         {
@@ -38,7 +38,7 @@ namespace BlazorCMS.Shared
         /// is created as according to the pattern type-key and should be unique.
         /// </summary>
         [JsonProperty(PropertyName = "key", NullValueHandling = NullValueHandling.Ignore)]
-        public string LogicalKey { get; set; }
+        public string? LogicalKey { get; set; }
         // used to set Time-to-live for expiration policy
         [JsonProperty(PropertyName = "ttl", NullValueHandling = NullValueHandling.Ignore)]
         public int? TimeToLive { get; set; }

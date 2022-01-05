@@ -24,5 +24,13 @@ namespace BlazorCMS.Server.Controllers
         {
             return await _siteConfiguration.GetArticleByKeyAsync(articleKey);
         }
+        [HttpPost("writearticle")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [Authorize(Roles = "administrator")]
+        public async Task<IActionResult> WriteArticle([FromBody] Article article)
+        {
+            Article updatedArticle = await _siteConfiguration.WriteArticleAsync(article);
+            return Ok(updatedArticle);
+        }
     }
 }

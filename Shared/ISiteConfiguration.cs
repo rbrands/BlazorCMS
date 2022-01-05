@@ -9,5 +9,6 @@ namespace BlazorCMS.Shared
     public interface ISiteConfiguration
     {
         Task<Article> GetArticleByKeyAsync(string articleKey);
+        Task<Article> WriteArticleAsync(Article article);
     }
 }

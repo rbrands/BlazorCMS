@@ -23,5 +23,11 @@ namespace BlazorCMS.ClientData
         {
             return await _httpNoAuthenticationClient.HttpClient.GetFromJsonAsync<Article>($"api/siteconfiguration/getarticlebykey/{articleKey}");
         }
+        public async Task<Article> WriteArticleAsync(Article article)
+        {
+            HttpResponseMessage response = await _httpClient.PostAsJsonAsync<Article>($"/api/siteconfiguration/writearticle", article);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<Article>();
+        }
     }
 }

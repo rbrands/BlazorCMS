@@ -20,5 +20,11 @@ namespace BlazorCMSPrerendered.Server.Controllers
         {
             return await _siteConfiguration.GetArticleByKeyAsync(articleKey);
         }
+        [HttpPost("writearticle")]
+        public Task<Article> WriteArticle([FromBody] Article article)
+        {
+            throw new NotImplementedException("WriteArticle not supported in this version of the app.");
+        }
+
     }
 }

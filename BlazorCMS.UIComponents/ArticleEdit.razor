@@ -5,7 +5,9 @@
 <Article ArticleKey="@ArticleKey" EditMode="@_editMode">@ChildContent</Article>
 <AuthorizeView Roles="administrator">
     <Authorized>
-        <button class="btn btn-sm btn-outline-secondary" role="button" @onclick="@(() => SwitchToEditMode())"><span class="oi oi-pencil"></span></button>
+        <div hidden="@_editMode">
+            <button class="btn btn-sm btn-outline-secondary" role="button" @onclick="@(() => SwitchToEditMode())"><span class="oi oi-pencil"></span></button>
+        </div
     </Authorized>
 </AuthorizeView>
 
