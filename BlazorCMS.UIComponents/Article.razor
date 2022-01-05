@@ -1,16 +1,50 @@
-﻿@using Shared=BlazorCMS.Shared
+﻿@using Blazored.TextEditor
+@using Shared=BlazorCMS.Shared
 @implements IDisposable
 @inject Shared.AppState AppStateStore
 @inject Shared.ISiteConfiguration SiteConfiguration
 
 <NotificationMessage @ref="@_notificationMessage" />
-@if (!String.IsNullOrEmpty(_article.ArticleText))
+@if (!EditMode)
 {
-    @((MarkupString)_article.ArticleText)
+    @if (!String.IsNullOrEmpty(_article.ArticleText))
+    {
+        @((MarkupString)_article.ArticleText)
+    }
+    else
+    {
+        @ChildContent
+    }
 }
 else
 {
-    @ChildContent
+   <BlazoredTextEditor @ref="_htmlArticle" Placeholder="Artikel-Text">
+        <ToolbarContent>
+            <span class="ql-formats">
+                <button class="ql-bold"></button>
+                <button class="ql-italic"></button>
+                <button class="ql-underline"></button>
+            </span>
+            <span class="ql-formats">
+                <select class="ql-color"></select>
+                <select class="ql-background"></select>
+            </span>
+            <span class="ql-formats">
+                <button class="ql-list" value="ordered"></button>
+                <button class="ql-list" value="bullet"></button>
+            </span>
+            <span class="ql-formats">
+                <button class="ql-link"></button>
+            </span>
+        </ToolbarContent>
+        <EditorContent>
+            @if (null != _article.ArticleText)
+            {@((MarkupString)_article.ArticleText)}
+        </EditorContent>
+    </BlazoredTextEditor>
+    <button class="btn btn-sm btn-outline-secondary" role="button" @onclick="@(() => SaveArticle())"><span class="oi oi-check" title="Speichern"></span></button>
+    <button class="btn btn-sm btn-outline-secondary" role="button" @onclick="@(() => Cancel())"><span class="oi oi-x" title="Abbrechen"></span></button>
+
 }
 EditMode = @EditMode
 
@@ -22,7 +56,7 @@ EditMode = @EditMode
     [Parameter]
     public bool EditMode { get; set; }
     private NotificationMessage _notificationMessage;
-
+    private BlazoredTextEditor _htmlArticle;
     private Shared.Article _article = new Shared.Article();
 
     protected override async Task OnInitializedAsync()
@@ -50,6 +84,20 @@ EditMode = @EditMode
              _notificationMessage.ShowError($"Fehler: {ex.Message}");
         }
     }
+
+    private async Task SaveArticle()
+    {
+        _article.ArticleText = await _htmlArticle.GetHTML();
+        _article.ArticleKey = ArticleKey;
+        //await Api.WriteArticle(_article);
+        EditMode = false;
+    }
+    private void Cancel()
+    {
+        EditMode = false;
+    }
+
+
     public void Dispose()
     {
         AppStateStore.OnChange -= ReadArticle;
