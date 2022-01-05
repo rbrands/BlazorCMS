@@ -12,13 +12,16 @@ namespace BlazorCMS.ClientData
     public class SiteConfiguration : ISiteConfiguration
     {
         private readonly HttpClient _httpClient;
-        public SiteConfiguration(HttpClient httpClient)
+        private readonly HttpNoAuthenticationClient _httpNoAuthenticationClient;
+
+        public SiteConfiguration(HttpClient httpClient, HttpNoAuthenticationClient httpNoAuthenticationClient)
         {
             _httpClient = httpClient;
+            _httpNoAuthenticationClient = httpNoAuthenticationClient;
         }
         public async Task<Article> GetArticleByKeyAsync(string articleKey)
         {
-            return await _httpClient.GetFromJsonAsync<Article>($"api/siteconfiguration/getarticlebykey/{articleKey}");
+            return await _httpNoAuthenticationClient.HttpClient.GetFromJsonAsync<Article>($"api/siteconfiguration/getarticlebykey/{articleKey}");
         }
     }
 }

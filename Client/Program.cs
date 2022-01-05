@@ -12,10 +12,8 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddHttpClient("BlazorCMS.ServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
     .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
-
 // Supply HttpClient instances that include access tokens when making requests to the server project
 builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorCMS.ServerAPI"));
-
 builder.Services.AddMsalAuthentication<RemoteAuthenticationState,
     CustomUserAccount>(options =>
 {
@@ -27,8 +25,14 @@ builder.Services.AddMsalAuthentication<RemoteAuthenticationState,
 .AddAccountClaimsPrincipalFactory<RemoteAuthenticationState, CustomUserAccount,
 CustomAccountFactory>();
 
+// Add typed HttpClient for http requests without authentication, see https://docs.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-3.1#unauthenticated-or-unauthorized-web-api-requests-in-an-app-with-a-secure-default-client-2
+builder.Services.AddHttpClient<HttpNoAuthenticationClient>("BlazorCMS.ServerAPINoAuthentication", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
+builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorCMS.ServerAPINoAuthentication"));
+
+// To get user details
 builder.Services.AddGraphClient();
-// Create services to be used via dependency injection
+
+// Create services to be used via dependency injection by business logic
 builder.Services.AddSingleton<BlazorCMS.UIComponents.AppState>();
 builder.Services.AddScoped<ISiteConfiguration, SiteConfiguration>();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
