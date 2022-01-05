@@ -14,7 +14,7 @@ builder.Services.AddHttpClient<HttpNoAuthenticationClient>("BlazorCMS.ServerAPIN
 builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorCMS.ServerAPINoAuthentication"));
 
 // Create services to be used via dependency injection
-builder.Services.AddSingleton<BlazorCMS.UIComponents.AppState>();
+builder.Services.AddSingleton<BlazorCMS.Shared.AppState>();
 builder.Services.AddScoped<ISiteConfiguration, SiteConfiguration>();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 

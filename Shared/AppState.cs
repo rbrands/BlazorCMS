@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Shared=BlazorCMS.Shared;
+using Shared = BlazorCMS.Shared;
 
-namespace BlazorCMS.UIComponents
+namespace BlazorCMS.Shared
 {
     public class AppState
     {

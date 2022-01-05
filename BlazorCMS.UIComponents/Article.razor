@@ -1,18 +1,29 @@
 ﻿@using Shared=BlazorCMS.Shared
 @implements IDisposable
-@inject AppState AppStateStore
+@inject Shared.AppState AppStateStore
 @inject Shared.ISiteConfiguration SiteConfiguration
 
-
-@ChildContent
+<NotificationMessage @ref="@_notificationMessage" />
+@if (!String.IsNullOrEmpty(_article.ArticleText))
+{
+    @((MarkupString)_article.ArticleText)
+}
+else
+{
+    @ChildContent
+}
+EditMode = @EditMode
 
 @code {
     [Parameter]
     public string ArticleKey { get; set; }
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public bool EditMode { get; set; }
+    private NotificationMessage _notificationMessage;
+
     private Shared.Article _article = new Shared.Article();
-    private bool _editMode = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -21,16 +32,23 @@
     }
     private async void ReadArticle()
     {
-        if (AppStateStore.ArticleCache.ContainsKey(ArticleKey))
+        try
         {
-            _article = AppStateStore.ArticleCache[ArticleKey];
+            if (AppStateStore.ArticleCache.ContainsKey(ArticleKey))
+            {
+                _article = AppStateStore.ArticleCache[ArticleKey];
+            }
+            else
+            {
+                _article = await SiteConfiguration.GetArticleByKeyAsync(ArticleKey);
+                AppStateStore.ArticleCache[ArticleKey] = _article;
+            }
+            StateHasChanged();
         }
-        else
+        catch (Exception ex)
         {
-            _article = await SiteConfiguration.GetArticleByKeyAsync(ArticleKey);
-            AppStateStore.ArticleCache[ArticleKey] = _article;
+             _notificationMessage.ShowError($"Fehler: {ex.Message}");
         }
-        StateHasChanged();
     }
     public void Dispose()
     {

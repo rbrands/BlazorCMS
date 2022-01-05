@@ -25,6 +25,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddSingleton(builder.Configuration);
 CosmosClient cosmosClient = new CosmosClient(builder.Configuration["COSMOS_DB_CONNECTION_STRING"]);
 builder.Services.AddSingleton(cosmosClient);
+builder.Services.AddSingleton<BlazorCMS.Shared.AppState>();
 builder.Services.AddSingleton<CosmosDBRepository<Article>>();
 builder.Services.AddSingleton<ISiteConfiguration, SiteConfiguration>();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();

@@ -1,0 +1,24 @@
+﻿@using Shared=BlazorCMS.Shared
+@inject Shared.AppState AppStateStore
+@inject Shared.ISiteConfiguration SiteConfiguration
+
+<Article ArticleKey="@ArticleKey" EditMode="@_editMode">@ChildContent</Article>
+<AuthorizeView Roles="administrator">
+    <Authorized>
+        <button class="btn btn-sm btn-outline-secondary" role="button" @onclick="@(() => SwitchToEditMode())"><span class="oi oi-pencil"></span></button>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    [Parameter]
+    public string ArticleKey { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    private bool _editMode = false;
+
+    private void SwitchToEditMode()
+    {
+        _editMode = true;
+    }
+
+}

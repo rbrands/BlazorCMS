@@ -20,9 +20,28 @@ namespace BlazorCMS.ServerData
             _articleRepository = articleRepository;
         }
 
-        public Task<Article> GetArticleByKeyAsync(string articleKey)
+        public async Task<Article> GetArticleByKeyAsync(string articleKey)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (String.IsNullOrEmpty(articleKey))
+                {
+                    throw new Exception("Missing key for call GetArticle()");
+                }
+                _logger.LogInformation("GetArticle(key = {articleKey})", articleKey);
+                Article article = await _articleRepository.GetItemByKey(articleKey);
+                if (null == article)
+                {
+                    article = new Article();
+                    article.ArticleKey = articleKey;
+                }
+                return article;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "GetArticle() failed.");
+                throw;
+            }
         }
     }
 }

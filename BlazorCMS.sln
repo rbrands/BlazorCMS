@@ -8,18 +8,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCMS.Client", "Client\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCMS.Shared", "Shared\BlazorCMS.Shared.csproj", "{CD95F4AD-68E3-4EB0-959E-853EEEF04033}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCMSPrerendered.Server", "BlazorCMSPrerendered\Server\BlazorCMSPrerendered.Server.csproj", "{85404A5C-234B-4AEC-9F97-CDA92B49F073}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCMSPrerendered.Server", "BlazorCMSPrerendered\Server\BlazorCMSPrerendered.Server.csproj", "{85404A5C-234B-4AEC-9F97-CDA92B49F073}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCMSPrerendered.Client", "BlazorCMSPrerendered\Client\BlazorCMSPrerendered.Client.csproj", "{51C871B7-5ADE-4F12-B3A8-008EEFEC3929}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCMSPrerendered.Client", "BlazorCMSPrerendered\Client\BlazorCMSPrerendered.Client.csproj", "{51C871B7-5ADE-4F12-B3A8-008EEFEC3929}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CD95F4AD-68E3-4EB0-959E-853EEEF04033} = {CD95F4AD-68E3-4EB0-959E-853EEEF04033}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCMS.ClientData", "BlazorCMS.ClientData\BlazorCMS.ClientData.csproj", "{5C6F3E1E-F826-4288-AAF9-3AC55C62C72B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCMS.ClientData", "BlazorCMS.ClientData\BlazorCMS.ClientData.csproj", "{5C6F3E1E-F826-4288-AAF9-3AC55C62C72B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCMS.ServerData", "BlazorCMS.ServerData\BlazorCMS.ServerData.csproj", "{AD48F82A-5AEF-489D-957E-691483818FB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCMS.ServerData", "BlazorCMS.ServerData\BlazorCMS.ServerData.csproj", "{AD48F82A-5AEF-489D-957E-691483818FB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCMS.UIComponents", "BlazorCMS.UIComponents\BlazorCMS.UIComponents.csproj", "{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCMS.UIComponents", "BlazorCMS.UIComponents\BlazorCMS.UIComponents.csproj", "{3A7DE6E7-E0D4-4FD1-BE18-41908AB6DA1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

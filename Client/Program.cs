@@ -33,7 +33,7 @@ builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().Cre
 builder.Services.AddGraphClient();
 
 // Create services to be used via dependency injection by business logic
-builder.Services.AddSingleton<BlazorCMS.UIComponents.AppState>();
+builder.Services.AddSingleton<BlazorCMS.Shared.AppState>();
 builder.Services.AddScoped<ISiteConfiguration, SiteConfiguration>();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 
