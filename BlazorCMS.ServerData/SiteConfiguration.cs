@@ -20,7 +20,7 @@ namespace BlazorCMS.ServerData
             _articleRepository = articleRepository;
         }
 
-        public async Task<Article> GetArticleByKeyAsync(string articleKey)
+        public async Task<Article?> GetArticleByKeyAsync(string articleKey)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace BlazorCMS.ServerData
                 throw;
             }
         }
-        public async Task<Article> WriteArticleAsync(Article article)
+        public async Task<Article?> WriteArticleAsync(Article article)
         {
             try
             {

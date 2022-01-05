@@ -49,21 +49,41 @@ else
 
 @code {
     [Parameter]
-    public string ArticleKey { get; set; }
+    public string ArticleKey { get; set; } = "DefaultArticle";
     [Parameter]
-    public RenderFragment ChildContent { get; set; }
+    public RenderFragment? ChildContent { get; set; }
     [Parameter]
     public bool EditMode { get; set; }
-    private NotificationMessage _notificationMessage;
-    private BlazoredTextEditor _htmlArticle;
-    private Shared.Article _article = new Shared.Article();
+    private NotificationMessage? _notificationMessage;
+    private BlazoredTextEditor? _htmlArticle;
+    private Shared.Article? _article = new Shared.Article();
 
     protected override async Task OnInitializedAsync()
     {
         AppStateStore.OnChange += ReadArticle;
-        ReadArticle();
+        await ReadArticleAsync();
     }
     private async void ReadArticle()
+    {
+        try
+        {
+            if (AppStateStore.ArticleCache.ContainsKey(ArticleKey))
+            {
+                _article = AppStateStore.ArticleCache[ArticleKey];
+            }
+            else
+            {
+                _article = await SiteConfiguration.GetArticleByKeyAsync(ArticleKey);
+                AppStateStore.ArticleCache[ArticleKey] = _article;
+            }
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            _notificationMessage.ShowError($"Fehler: {ex.Message}");
+        }
+    }
+    private async Task ReadArticleAsync()
     {
         try
         {

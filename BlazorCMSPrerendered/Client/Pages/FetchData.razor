@@ -1,6 +1,8 @@
 ﻿@page "/fetchdata"
 @using BlazorCMS.Shared
 @inject IWeatherForecastService WeatherForecastService
+@inject PersistentComponentState PersistentState
+@implements IDisposable
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -39,9 +41,28 @@ else
 
 @code {
     private WeatherForecast[]? forecasts;
+    private PersistingComponentStateSubscription _subscription;
+
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await WeatherForecastService.GetForecastAsync();
+        _subscription = PersistentState.RegisterOnPersisting(PersistForecasts);
+        if (PersistentState.TryTakeFromJson<WeatherForecast[]>("fetchData", out var stored))
+        {
+            forecasts = stored;
+        }
+        else
+        {
+            forecasts = await WeatherForecastService.GetForecastAsync();
+        }
+    }
+    private Task PersistForecasts()
+    {
+        PersistentState.PersistAsJson("fetchData", forecasts);
+        return Task.CompletedTask;
+    }
+    public void Dispose()
+    {
+        _subscription.Dispose();
     }
 }

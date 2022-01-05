@@ -19,11 +19,9 @@ namespace BlazorCMS.ClientData
             _httpClient = httpClient;
             _httpNoAuthenticationClient = httpNoAuthenticationClient;
         }
-        public async Task<Article> GetArticleByKeyAsync(string articleKey)
-        {
-            return await _httpNoAuthenticationClient.HttpClient.GetFromJsonAsync<Article>($"api/siteconfiguration/getarticlebykey/{articleKey}");
-        }
-        public async Task<Article> WriteArticleAsync(Article article)
+        public async Task<Article?> GetArticleByKeyAsync(string articleKey) => await _httpNoAuthenticationClient.HttpClient.GetFromJsonAsync<Article>($"api/siteconfiguration/getarticlebykey/{articleKey}");
+
+        public async Task<Article?> WriteArticleAsync(Article article)
         {
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync<Article>($"/api/siteconfiguration/writearticle", article);
             response.EnsureSuccessStatusCode();

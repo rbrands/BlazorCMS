@@ -18,8 +18,10 @@ namespace BlazorCMSPrerendered.Server.Controllers
         [HttpGet("getarticlebykey/{articleKey}")]
         public async Task<Article> GetArticleByKey([FromRoute] string articleKey)
         {
+            _logger.LogInformation($"SiteConfigurationController.GetArticleByKey({articleKey})", articleKey);
             return await _siteConfiguration.GetArticleByKeyAsync(articleKey);
         }
+
         [HttpPost("writearticle")]
         public Task<Article> WriteArticle([FromBody] Article article)
         {
