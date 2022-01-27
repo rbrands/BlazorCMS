@@ -19,17 +19,19 @@ namespace BlazorCMS.Server.Controllers
             _siteConfiguration = siteConfiguration;
         }
         [HttpGet("getarticlebykey/{articleKey}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [AllowAnonymous]
-        public async Task<Article> GetArticleByKey([FromRoute] string articleKey)
+        public async Task<IActionResult> GetArticleByKey([FromRoute] string articleKey)
         {
-            return await _siteConfiguration.GetArticleByKeyAsync(articleKey);
+            Article? article = await _siteConfiguration.GetArticleByKeyAsync(articleKey);
+            return Ok(article);
         }
         [HttpPost("writearticle")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [Authorize(Roles = "administrator")]
         public async Task<IActionResult> WriteArticle([FromBody] Article article)
         {
-            Article updatedArticle = await _siteConfiguration.WriteArticleAsync(article);
+            Article? updatedArticle = await _siteConfiguration.WriteArticleAsync(article);
             return Ok(updatedArticle);
         }
     }

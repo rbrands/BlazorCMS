@@ -7,7 +7,7 @@
 <NotificationMessage @ref="@_notificationMessage" />
 @if (!EditMode)
 {
-    @if (!String.IsNullOrEmpty(_article.ArticleText))
+    @if (!String.IsNullOrEmpty(_article?.ArticleText))
     {
         @((MarkupString)_article.ArticleText)
     }
@@ -38,7 +38,7 @@ else
             </span>
         </ToolbarContent>
         <EditorContent>
-            @if (null != _article.ArticleText)
+            @if (null != _article?.ArticleText)
             {@((MarkupString)_article.ArticleText)}
         </EditorContent>
     </BlazoredTextEditor>
@@ -80,7 +80,10 @@ else
         }
         catch (Exception ex)
         {
-            _notificationMessage.ShowError($"Fehler: {ex.Message}");
+            if (null != _notificationMessage)
+            {
+                _notificationMessage.ShowError($"Fehler: {ex.Message}");
+            }
         }
     }
     private async Task ReadArticleAsync()
@@ -100,7 +103,10 @@ else
         }
         catch (Exception ex)
         {
-            _notificationMessage.ShowError($"Fehler: {ex.Message}");
+            if (null != _notificationMessage)
+            {
+                _notificationMessage.ShowError($"Fehler: {ex.Message}");
+            }
         }
     }
 
@@ -108,14 +114,24 @@ else
     {
         try
         {
-            _article.ArticleText = await _htmlArticle.GetHTML();
+            if (null == _article)
+            {
+                _article = new Shared.Article();
+            }
+            if (null != _htmlArticle)
+            {
+                _article.ArticleText = await _htmlArticle.GetHTML();
+            }
             _article.ArticleKey = ArticleKey;
             await SiteConfiguration.WriteArticleAsync(_article);
             EditMode = false;
         }
         catch (Exception ex)
         {
-           _notificationMessage.ShowError($"Fehler: {ex.Message}");
+            if (null != _notificationMessage)
+            {
+                _notificationMessage.ShowError($"Fehler: {ex.Message}");
+            }
         }
     }
     private void Cancel()

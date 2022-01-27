@@ -16,17 +16,20 @@ namespace BlazorCMSPrerendered.Server.Controllers
             _siteConfiguration = siteConfiguration;
         }
         [HttpGet("getarticlebykey/{articleKey}")]
-        public async Task<Article> GetArticleByKey([FromRoute] string articleKey)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetArticleByKey([FromRoute] string articleKey)
         {
-            _logger.LogInformation($"SiteConfigurationController.GetArticleByKey({articleKey})", articleKey);
-            return await _siteConfiguration.GetArticleByKeyAsync(articleKey);
+            Article? article = await _siteConfiguration.GetArticleByKeyAsync(articleKey);
+            return Ok(article);
+        }
+        [HttpPost("writearticle")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> WriteArticle([FromBody] Article article)
+        {
+            Article? updatedArticle = await _siteConfiguration.WriteArticleAsync(article);
+            return Ok(updatedArticle);
         }
 
-        [HttpPost("writearticle")]
-        public Task<Article> WriteArticle([FromBody] Article article)
-        {
-            throw new NotImplementedException("WriteArticle not supported in this version of the app.");
-        }
 
     }
 }

@@ -1,0 +1,24 @@
+﻿@page "/{MainTopic}/{SubTopic}"
+@page "/{MainTopic}"
+@inject NavigationManager Navigation
+@inject IShortcutService ShortcutService
+
+
+@code {
+    [Parameter] public string? MainTopic { get; set; }
+    [Parameter] public string? SubTopic { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Shortcut? target = null;
+        if (null != MainTopic)
+        {
+            target = await ShortcutService.GetShortcut(MainTopic, SubTopic);
+            if (null != target && !String.IsNullOrEmpty(target.Url))
+            {
+                Navigation.NavigateTo(target.Url);
+            }
+        }
+    }
+
+}

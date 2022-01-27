@@ -36,5 +36,6 @@ builder.Services.AddGraphClient();
 builder.Services.AddSingleton<BlazorCMS.Shared.AppState>();
 builder.Services.AddScoped<ISiteConfiguration, SiteConfiguration>();
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
+builder.Services.AddScoped<IShortcutService, ShortcutService>();
 
 await builder.Build().RunAsync();

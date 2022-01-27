@@ -48,7 +48,7 @@ namespace BlazorCMS.ServerData
                                .DeleteItemAsync<T>(id, new PartitionKey(typeof(T).Name));
         }
 
-        public async Task<T> GetItem(string id)
+        public async Task<T?> GetItem(string id)
         {
             PartitionKey partitionKey = new PartitionKey(typeof(T).Name);
             if (String.IsNullOrEmpty(id))
@@ -82,7 +82,7 @@ namespace BlazorCMS.ServerData
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        public async Task<T> GetItemByKey(string key)
+        public async Task<T?> GetItemByKey(string key)
         {
             if (String.IsNullOrEmpty(key))
             {
@@ -112,7 +112,7 @@ namespace BlazorCMS.ServerData
         /// </summary>
         /// <param name="predicate"></param>
         /// <returns></returns>
-        public async Task<T> GetFirstItemOrDefault(Expression<Func<T, bool>> predicate)
+        public async Task<T?> GetFirstItemOrDefault(Expression<Func<T, bool>> predicate)
         {
             Container container = _cosmosClient.GetDatabase(_cosmosDbDatabase).GetContainer(_cosmosDbContainer);
             PartitionKey partitionKey = new PartitionKey(typeof(T).Name);
@@ -126,7 +126,7 @@ namespace BlazorCMS.ServerData
             {
                 results.AddRange(await itemIterator.ReadNextAsync());
             }
-            T firstItem = results.FirstOrDefault();
+            T? firstItem = results.FirstOrDefault();
             return firstItem;
         }
         public async Task<IEnumerable<T>> GetItems()

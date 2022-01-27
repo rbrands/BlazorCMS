@@ -29,7 +29,7 @@ namespace BlazorCMS.ServerData
                     throw new Exception("Missing key for call GetArticle()");
                 }
                 _logger.LogInformation("GetArticle(key = {articleKey})", articleKey);
-                Article article = await _articleRepository.GetItemByKey(articleKey);
+                Article? article = await _articleRepository.GetItemByKey(articleKey);
                 if (null == article)
                 {
                     article = new Article();

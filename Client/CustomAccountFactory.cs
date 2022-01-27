@@ -23,13 +23,13 @@ namespace BlazorCMS.Client
             this.serviceProvider = serviceProvider;
             this.logger = logger;
         }
-        public override async ValueTask<ClaimsPrincipal> CreateUserAsync(
+        public override async ValueTask<ClaimsPrincipal?> CreateUserAsync(
             CustomUserAccount account,
             RemoteAuthenticationUserOptions options)
         {
             var initialUser = await base.CreateUserAsync(account, options);
 
-            if (initialUser.Identity.IsAuthenticated)
+            if (null != initialUser?.Identity && initialUser.Identity.IsAuthenticated)
             {
                 var userIdentity = (ClaimsIdentity)initialUser.Identity;
 
