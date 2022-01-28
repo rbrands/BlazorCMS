@@ -23,5 +23,14 @@ namespace BlazorCMS.ServerData
             Shortcut? target = (await _shortcutRepository.GetItems(s => s.Category == category && s.Nickname == nickname)).FirstOrDefault();
             return target;
         }
+        public async Task<IEnumerable<Shortcut>> GetShortcuts()
+        {
+            IEnumerable<Shortcut>? shortcuts = await _shortcutRepository.GetItems();
+            if (null == shortcuts)
+            {
+                shortcuts = new List<Shortcut>();                
+            }
+            return shortcuts;
+        }
     }
 }

@@ -24,6 +24,15 @@ namespace BlazorCMS.ClientData
             string nickname = String.IsNullOrEmpty(subTopic) ? mainTopic : subTopic;
             return await _httpNoAuthenticationClient.HttpClient.GetFromJsonAsync<Shortcut>($"api/shortcuts/getshortcut/{category}/{nickname}");
         }
+        public async Task<IEnumerable<Shortcut>> GetShortcuts()
+        {
+            IEnumerable<Shortcut>? shortcuts = await _httpClient.GetFromJsonAsync<IEnumerable<Shortcut>>($"api/shortcuts/getshortcuts");
+            if (null == shortcuts)
+            {
+                shortcuts = new List<Shortcut>();
+            }
+            return shortcuts;
+        }
 
     }
 }
