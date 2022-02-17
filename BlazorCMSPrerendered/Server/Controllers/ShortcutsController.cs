@@ -26,5 +26,12 @@ namespace BlazorCMSPrerendered.Server.Controllers
             }
             return Ok(target);
         }
+        [HttpGet("getshortcuts")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public Task<IActionResult> GetShortcuts()
+        {
+            throw new NotImplementedException("Not implemented for prerendered version.");
+        }
+
     }
 }

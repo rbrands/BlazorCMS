@@ -24,10 +24,9 @@ namespace BlazorCMSPrerendered.Server.Controllers
         }
         [HttpPost("writearticle")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> WriteArticle([FromBody] Article article)
-        {
-            Article? updatedArticle = await _siteConfiguration.WriteArticleAsync(article);
-            return Ok(updatedArticle);
+        public Task<IActionResult> WriteArticle([FromBody] Article article)
+        { 
+            throw new NotImplementedException("Not implemented for prerendered version.");
         }
 
 

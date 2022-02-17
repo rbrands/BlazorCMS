@@ -27,5 +27,13 @@ namespace BlazorCMS.Server.Controllers
             }
             return Ok(target);
         }
+        [HttpGet("getshortcuts")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [Authorize(Roles = "administrator")]
+        public async Task<IActionResult> GetShortcuts()
+        {
+            IEnumerable<Shortcut> shortcuts = await _shortcutService.GetShortcuts();
+            return Ok(shortcuts);
+        }
     }
 }
